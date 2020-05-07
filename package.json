@@ -1,0 +1,20 @@
+{
+  "name": "precodahora-api",
+  "version": "1.0.0",
+  "description": "Preço da Hora Private API written in JS",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "Pedro Neri <pedneri1@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "node-html-parser": "^1.2.16",
+    "tough-cookie": "^4.0.0",
+    "useragent-from-seed": "^1.0.1"
+  },
+  "devDependencies": {
+    "ava": "^3.8.1"
+  }
+}
