@@ -2,6 +2,12 @@
 
 Implementação simples, fácil e completa da API Privada para o [Preço da Hora Bahia](https://precodahora.ba.gov.br/)
 
+## Instalação
+
+```bash
+npm i precodahora-api
+```
+
 ## Utilização
 
 Crie uma instância para `PrecoDaHora` execute um dos métodos `sugestao` ou `produto`
