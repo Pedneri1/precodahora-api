@@ -1,6 +1,6 @@
 {
   "name": "precodahora-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Preço da Hora Private API written in JS",
   "main": "src/index.js",
   "scripts": {
