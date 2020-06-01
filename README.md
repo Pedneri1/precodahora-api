@@ -2,6 +2,8 @@
 
 [![precodahora-api](https://circleci.com/gh/Pedneri1/precodahora-api.svg?style=shield)](https://circleci.com/gh/Pedneri1/precodahora-api)
 
+[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
+
 Implementação simples, fácil e completa da API Privada para o [Preço da Hora Bahia](https://precodahora.ba.gov.br/)
 
 ## Instalação
