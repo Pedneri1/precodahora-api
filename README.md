@@ -1,5 +1,7 @@
 ### Uma API Privada para o Preço da Hora Bahia
 
+[![precodahora-api](https://circleci.com/gh/Pedneri1/precodahora-api.svg?style=shield)](https://circleci.com/gh/Pedneri1/precodahora-api)
+
 Implementação simples, fácil e completa da API Privada para o [Preço da Hora Bahia](https://precodahora.ba.gov.br/)
 
 ## Instalação
