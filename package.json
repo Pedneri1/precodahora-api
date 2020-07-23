@@ -1,22 +1,37 @@
 {
-  "name": "precodahora-api",
-  "version": "1.0.1",
-  "description": "Preço da Hora Private API written in JS",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "author": "Pedro Neri <pedneri1@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "axios": "^0.19.2",
-    "node-html-parser": "^1.2.16",
-    "querystring": "^0.2.0",
-    "tough-cookie": "^4.0.0",
-    "useragent-from-seed": "^1.0.1",
-    "xo": "^0.30.0"
-  },
-  "devDependencies": {
-    "ava": "^3.8.1"
-  }
+	"name": "precodahora-api",
+	"version": "1.0.2",
+	"description": "Preço da Hora Private API written in JS",
+	"main": "src/index.js",
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Pedneri1/precodahora-api"
+	},
+	"keywords": [
+		"preco da hora",
+		"private api",
+		"api privada",
+		"bahia",
+		"node"
+	],
+	"author": "Pedro Neri <pedneri1@gmail.com>",
+	"bugs": {
+		"url": "https://github.com/Pedneri1/precodahora-api/issues"
+	},
+	"homepage": "https://github.com/Pedneri1/precodahora-api",
+	"license": "MIT",
+	"dependencies": {
+		"axios": "^0.19.2",
+		"node-html-parser": "^1.2.16",
+		"querystring": "^0.2.0",
+		"tough-cookie": "^4.0.0",
+		"useragent-from-seed": "^1.0.1",
+		"xo": "^0.30.0"
+	},
+	"devDependencies": {
+		"ava": "^3.8.1"
+	}
 }
