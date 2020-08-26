@@ -5,6 +5,9 @@ const HTMLParser = require('node-html-parser');
 const querystring = require('querystring');
 
 const config = require('./config');
+const isRequired = parameter => {
+	throw new Error(`Missing ${parameter} required attribute`);
+};
 
 class PrecoDaHora {
 	constructor() {
@@ -55,7 +58,7 @@ class PrecoDaHora {
 		this.request.defaults.headers.Cookie = cookies;
 	}
 
-	async sugestao({item}) {
+	async sugestao({item = isRequired('item')}) {
 		this._setCookiesAndCsrfToken(
 			await this._getCookiesAndCsrfToken({page: '/'})
 		);
@@ -65,24 +68,24 @@ class PrecoDaHora {
 
 	async produto({
 		termo = '',
-		gtin = '',
+		gtin = isRequired('gtin'),
 		cnpj = '',
-		horas = '',
+		horas = 72,
 		anp = '',
 		codmun = '',
-		latitude = '',
-		longitude = '',
-		raio = '',
+		latitude = isRequired('latitude'),
+		longitude = isRequired('longitude'),
+		raio = 15,
 		precomax = 0,
 		precomin = 0,
-		pagina = '',
-		ordenar = '',
+		pagina = 1,
+		ordenar = 'preco.asc',
 		categorias = '',
-		processo = '',
+		processo = 'carregar',
 		totalCategorias = '',
-		totalRegistros = '',
-		totalPaginas = '',
-		pageview = ''
+		totalRegistros = 0,
+		totalPaginas = 0,
+		pageview = 'lista'
 	}) {
 		this._setCookiesAndCsrfToken(
 			await this._getCookiesAndCsrfToken({page: '/produtos/'})

@@ -26,3 +26,27 @@ test('getProduto', async t => {
 	});
 	t.is(response.data.codigo, 80);
 });
+
+test('Lança erro quando faltando atributo item na função sugestão()', async t => {
+	const err = await t.throwsAsync(
+		async () => {
+			await client.sugestao({});
+		},
+		{instanceOf: Error}
+	);
+	t.is(err.message, 'Missing item required attribute');
+});
+
+test('Lança erro quando faltando atributo grin na função produto()', async t => {
+	const err = await t.throwsAsync(
+		async () => {
+			await client.produto({
+				latitude: -12.2733,
+				longitude: -38.9556
+			});
+		},
+		{instanceOf: Error}
+	);
+
+	t.is(err.message, 'Missing gtin required attribute');
+});
