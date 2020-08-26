@@ -17,83 +17,85 @@ npm i precodahora-api
 Crie uma instância para `PrecoDaHora` execute um dos métodos `sugestao` ou `produto`
 
 ```js
+const PrecoDaHora = require("precodahora-api");
 const client = new PrecoDaHora();
 
 client
-  .sugestao({ item: "ABACAXI" })
-  .then((res) => {
-    if (res.data.codigo == 80) {
-      console.log("Sugestões para o termo buscado:");
-      console.log(res.data.resultado);
-    } else {
-      console.log("Ocorreu um erro");
-    }
-  })
-  .catch((error) => console.error(error));
+	.sugestao({ item: "ABACAXI" })
+	.then((res) => {
+		if (res.data.codigo == 80) {
+			console.log("Sugestões para o termo buscado:");
+			console.log(res.data.resultado);
+		} else {
+			console.log("Ocorreu um erro");
+		}
+	})
+	.catch((error) => console.error(error));
 
 client
-  .produto({
-    gtin: 7891055317303,
-    horas: 72,
-    latitude: -12.2733,
-    longitude: -38.9556,
-    raio: 15,
-    precomax: 0,
-    precomin: 0,
-    ordenar: "preco.asc",
-    pagina: 1,
-    processo: "carregar",
-    totalRegistros: 0,
-    totalPaginas: 0,
-    pageview: "lista",
-  })
-  .then((res) => {
-    if (res.data.codigo == 80) {
-      console.log("Resultado da busca para o produto: ");
-      console.log(res.data.resultado);
-    } else {
-      console.log("Ocorreu um erro");
-    }
-  });
+	.produto({
+		gtin: 7891055317303,
+		horas: 72,
+		latitude: -12.2733,
+		longitude: -38.9556,
+		raio: 15,
+		precomax: 0,
+		precomin: 0,
+		ordenar: "preco.asc",
+		pagina: 1,
+		processo: "carregar",
+		totalRegistros: 0,
+		totalPaginas: 0,
+		pageview: "lista",
+	})
+	.then((res) => {
+		if (res.data.codigo == 80) {
+			console.log("Resultado da busca para o produto: ");
+			console.log(res.data.resultado);
+		} else {
+			console.log("Ocorreu um erro");
+		}
+	});
 ```
 
 Usando o `async/await` no Node >= 8
 
 ```js
+const PrecoDaHora = require("precodahora-api");
 const client = new PrecoDaHora();
 
 (async () => {
-  const res = await client.sugestao("ABACAXI");
-  if (res.data.codigo == 80) {
-    console.log("Resultado da busca para o produto: ");
-    console.log(res.data.resultado);
-  } else {
-    console.log("Ocorreu um erro");
-  }
+	const res = await client.sugestao("ABACAXI");
+	if (res.data.codigo == 80) {
+		console.log("Resultado da busca para o produto: ");
+		console.log(res.data.resultado);
+	} else {
+		console.log("Ocorreu um erro");
+	}
 })();
 
 (async () => {
-  const res = await client.produto({
-    gtin: 7891055317303,
-    horas: 72,
-    latitude: -12.2733,
-    longitude: -38.9556,
-    raio: 15,
-    precomax: 0,
-    precomin: 0,
-    ordenar: "preco.asc",
-    pagina: 1,
-    processo: "carregar",
-    totalRegistros: 0,
-    totalPaginas: 0,
-    pageview: "lista",
-  });
-  if (res.data.codigo == 80) {
-    console.log("Resultado da busca para o produto: ");
-    console.log(res.data.resultado);
-  } else {
-    console.log("Ocorreu um erro");
-  }
+	const res = await client.produto({
+		gtin: 7891055317303,
+		horas: 72,
+		latitude: -12.2733,
+		longitude: -38.9556,
+		raio: 15,
+		precomax: 0,
+		precomin: 0,
+		ordenar: "preco.asc",
+		pagina: 1,
+		processo: "carregar",
+		totalRegistros: 0,
+		totalPaginas: 0,
+		pageview: "lista",
+	});
+	if (res.data.codigo == 80) {
+		console.log("Resultado da busca para o produto: ");
+		console.log(res.data.resultado);
+	} else {
+		console.log("Ocorreu um erro");
+	}
 })();
 ```
 
@@ -108,6 +110,7 @@ const client = new PrecoDaHora();
 ### PrecoDaHora()
 
 ```js
+const PrecoDaHora = require("precodahora-api");
 const client = new PrecoDaHora();
 ```
 
@@ -128,19 +131,19 @@ const sugestoes = await client.sugestao({ item: "ÁGUA" });
 
 ```js
 const produto = await client.produto({
-  gtin: 7891055317303,
-  horas: 72,
-  latitude: -12.2733,
-  longitude: -38.9556,
-  raio: 15,
-  precomax: 0,
-  precomin: 0,
-  ordenar: "preco.desc",
-  pagina: 1,
-  processo: "carregar",
-  totalRegistros: 0,
-  totalPaginas: 0,
-  pageview: "lista",
+	gtin: 7891055317303,
+	horas: 72,
+	latitude: -12.2733,
+	longitude: -38.9556,
+	raio: 15,
+	precomax: 0,
+	precomin: 0,
+	ordenar: "preco.desc",
+	pagina: 1,
+	processo: "carregar",
+	totalRegistros: 0,
+	totalPaginas: 0,
+	pageview: "lista",
 });
 ```
 
