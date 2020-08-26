@@ -29,7 +29,7 @@
 		"querystring": "^0.2.0",
 		"tough-cookie": "^4.0.0",
 		"useragent-from-seed": "^1.0.1",
-		"xo": "^0.30.0"
+		"xo": "^0.33.0"
 	},
 	"devDependencies": {
 		"ava": "^3.8.1"
