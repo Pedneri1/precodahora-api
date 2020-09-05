@@ -65,7 +65,7 @@ const PrecoDaHora = require("precodahora-api");
 const client = new PrecoDaHora();
 
 (async () => {
-	const res = await client.sugestao("ABACAXI");
+	const res = await client.sugestao({ item: "ABACAXI" });
 	if (res.data.codigo == 80) {
 		console.log("Resultado da busca para o produto: ");
 		console.log(res.data.resultado);
