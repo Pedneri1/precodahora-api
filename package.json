@@ -24,7 +24,7 @@
 	"homepage": "https://github.com/Pedneri1/precodahora-api",
 	"license": "MIT",
 	"dependencies": {
-		"axios": "^0.19.2",
+		"axios": "^0.21.1",
 		"node-html-parser": "^1.2.16",
 		"querystring": "^0.2.0",
 		"tough-cookie": "^4.0.0",
